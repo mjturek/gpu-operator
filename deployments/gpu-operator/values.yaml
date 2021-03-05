@@ -9,7 +9,7 @@ nfd:
   enabled: true
 
 operator:
-  repository: nvcr.io/nvidia
+  repository: hub.docker.com/mjturek
   image: gpu-operator
   # If version is not specified, then default is to use chart.AppVersion
   #version: 1.6.1
@@ -18,7 +18,7 @@ operator:
   defaultRuntime: docker
   validator:
     image: cuda-sample
-    repository: nvcr.io/nvidia/k8s
+    repository: hub.docker.com/mjturek
     version: vectoradd-cuda10.2
     imagePullPolicy: IfNotPresent
   tolerations:
@@ -41,7 +41,7 @@ operator:
     timeEncoding: epoch
 
 driver:
-  repository: nvcr.io/nvidia
+  repository: hub.docker.com/mjturek
   image: driver
   version: "460.32.03"
   imagePullPolicy: IfNotPresent
@@ -69,7 +69,7 @@ driver:
     configMapName: ""
 
 toolkit:
-  repository: nvcr.io/nvidia/k8s
+  repository: hub.docker.com/mjturek
   image: container-toolkit
   version: 1.4.6-ubuntu18.04
   imagePullPolicy: IfNotPresent
@@ -94,7 +94,7 @@ toolkit:
   resources: {}
 
 devicePlugin:
-  repository: nvcr.io/nvidia
+  repository: hub.docker.com/mjturek
   image: k8s-device-plugin
   version: v0.8.2-ubi8
   imagePullPolicy: IfNotPresent
@@ -116,7 +116,7 @@ devicePlugin:
   resources: {}
 
 dcgmExporter:
-  repository: nvcr.io/nvidia/k8s
+  repository: hub.docker.com/mjturek
   image: dcgm-exporter
   version: 2.1.4-2.2.0-ubuntu20.04
   imagePullPolicy: IfNotPresent
@@ -132,7 +132,7 @@ dcgmExporter:
   resources: {}
 
 gfd:
-  repository: nvcr.io/nvidia
+  repository: hub.docker.com/mjturek
   image: gpu-feature-discovery
   version: v0.4.1
   imagePullPolicy: IfNotPresent
